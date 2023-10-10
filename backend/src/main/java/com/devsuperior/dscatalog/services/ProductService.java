@@ -63,7 +63,7 @@ public class ProductService {
 
     @Transactional(propagation = Propagation.SUPPORTS)
     public void delete(Long id) {
-        if(!repository.existsById(id)) {
+        if (!repository.existsById(id)) {
             throw new ResourceNotFoundException("Resource not found");
         }
         try {
@@ -82,7 +82,7 @@ public class ProductService {
 
         entity.getCategories().clear(); // clear any pre-existent category
 
-        for(CategoryDTO catDto : dto.getCategories()) {
+        for (CategoryDTO catDto : dto.getCategories()) {
             Category category = categoryRepository.getReferenceById(catDto.getId());
             entity.getCategories().add(category);
         }

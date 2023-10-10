@@ -26,7 +26,6 @@ public class UserService {
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-
     @Autowired
     private UserRepository repository;
     @Autowired
@@ -84,7 +83,6 @@ public class UserService {
         entity.setEmail(dto.getEmail());
 
         entity.getRoles().clear(); // clear any pre-existent roles
-
         for (RoleDTO roleDto : dto.getRoles()) {
             Role role = roleRepository.getReferenceById(roleDto.getId());
             entity.getRoles().add(role);

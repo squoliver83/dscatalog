@@ -9,7 +9,8 @@ public class StandardError {
     private String msg;
     private String path;
 
-    public StandardError(){}
+    public StandardError() {
+    }
 
     public Instant getTimestamp() {
         return timestamp;

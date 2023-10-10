@@ -2,7 +2,6 @@ package com.devsuperior.dscatalog.dto;
 
 import com.devsuperior.dscatalog.entities.Category;
 import com.devsuperior.dscatalog.entities.Product;
-import jakarta.persistence.Column;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ public class ProductDTO {
 
     private List<CategoryDTO> categories = new ArrayList<>();
 
-    public ProductDTO(){
+    public ProductDTO() {
     }
 
     public ProductDTO(Long id, String name, String description, Double price, String imgUrl, Instant date) {

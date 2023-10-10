@@ -3,7 +3,6 @@ package com.devsuperior.dscatalog.dto;
 import com.devsuperior.dscatalog.entities.Role;
 
 public class RoleDTO {
-
     private Long id;
     private String authority;
 
